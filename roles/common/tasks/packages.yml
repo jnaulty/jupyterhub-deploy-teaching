@@ -26,6 +26,7 @@
   with_items:
     - gfortran
     - git
+    - python3-distutils
 
 - name: install user applications
   apt: pkg={{item}} state=present
@@ -35,6 +36,7 @@
     - emacs
     - tree
     - htop
+    - tmux
 
 - name: install open-iscsi for cloud block volumes
   apt: pkg=open-iscsi state=present
